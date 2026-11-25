@@ -15,8 +15,9 @@ Two apps use it:
 - **[Darksiders II Native](https://github.com/hanxl-native/darksiders-native)** —
   Darksiders II Deathinitive Edition (base game; no update).
 
-The phone can build both files too, but Smash's 35,012 shaders take hours there;
-a PC does them in one go and leaves the phone free.
+The phone app can build the .nup; the pack (the code and shaders) is the PC's
+job: Smash's 35,012 shaders take hours on a phone, and the public APKs import
+the pack.zip this tool makes.
 
 ## Download
 
