@@ -48,7 +48,8 @@ A `.nup` or an extracted dump folder works too: pass it as the game and skip the
 
 The first run clones **Peanuts Native `v0.1.7-1`** (about 700 MB) into
 `.peanuts-native/` and installs the packer's Python packages there; later runs
-reuse it and its shader cache.
+reuse it and its shader cache. It also raises the importer's 64-file limit to
+256, so Smash's base + update + **99 DLC** (101 files) go in one `.nup`.
 
 ## What you need
 

@@ -59,6 +59,12 @@ if [ ! -f "$REPO/scripts/pack_android.py" ]; then
     git clone --depth 1 --branch "$TAG" https://github.com/igawa6/peanuts-native "$REPO" || die "the clone failed"
 fi
 
+# ---- more than 64 inputs: Smash's 99 DLC + base + update are 101 files, and the stock importer stops at 64 (two .nup passes are not possible)
+if [ -f "$HERE/patches/0001-256-inputs.patch" ] && ! grep -q 'Pkg pk\[256\]' "$REPO/dm/peanuts/import/nximport.c" 2>/dev/null; then
+    say "Raising the importer's input limit to 256 (the 99 DLC)..."
+    git -C "$REPO" apply "$HERE/patches/0001-256-inputs.patch" || die "the 256-inputs patch did not apply"
+fi
+
 # ---- Python with the packer's packages
 PY=${PYTHON:-python3}
 "$PY" -c 'import sys; sys.exit(0 if sys.version_info >= (3, 12) else 1)' || die "Python 3.12 or newer is needed"

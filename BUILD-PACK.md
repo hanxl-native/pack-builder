@@ -55,7 +55,7 @@ the shader translator is a .NET program.
 
 | Game | The `game` input | Extra inputs | Output name |
 |---|---|---|---|
-| `smash` | `.xci`, `.nsp`, `.nup` or a dump folder | the **13.0.5 (v2031616)** update, then the DLC | `out/SmashUltimate.nup` |
+| `smash` | `.xci`, `.nsp`, `.nup` or a dump folder | the **13.0.5 (v2031616)** update, then the DLC (up to 99) | `out/SmashUltimate.nup` |
 | `darksiders` | `.nsp`, `.xci`, `.nup` or a dump folder | the DLC, if any | `out/DarksidersII.nup` |
 
 Examples:
@@ -84,6 +84,10 @@ The app and its pack are built for **13.0.5 (v2031616)**. Pass that update after
 the base game. The app checks the update file and refuses other versions
 (`13.0.4` is refused, for example). If you pass only the base, the script warns;
 the pack it makes is for the base version and the app will not match it.
+
+The script raises the importer's 64-file limit to **256**, so the base, the
+update and all **99 DLC** fit in one `.nup` (101 files). The stock runtime stops
+at 64 and would leave the fighter passes out.
 
 ### Darksiders' version
 
