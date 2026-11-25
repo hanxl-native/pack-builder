@@ -1,0 +1,13 @@
+* text=auto eol=lf
+.peanuts-native/
+.venv/
+out/
+*.nup
+*.nsp
+*.xci
+*.nsz
+*.xcz
+*.zip
+prod.keys
+*.keys
+.DS_Store

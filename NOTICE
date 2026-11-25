@@ -1,0 +1,27 @@
+# Notices
+
+## Peanuts Native
+
+The builder clones and runs [Peanuts Native](https://github.com/igawa6/peanuts-native)
+at `v0.1.7-1` (the runtime the apps are built with):
+
+    Copyright (c) 2026 seedds
+    Copyright (c) 2026 Swap2-Native contributors
+    Copyright (c) 2026 EddizEge (file-backed memory pools, from Anka Native)
+
+Peanuts Native is MIT; its Android host and the on-device packer are
+GPL-3.0-or-later as a whole. The clone stays in `.peanuts-native/` and is not
+part of this repository.
+
+The shader translator runs on the .NET runtime (MIT, Microsoft). The packer's
+Python packages are capstone (BSD-3-Clause), lz4 (BSD-2-Clause) and zstandard
+(BSD-3-Clause).
+
+## The game
+
+The builder reads **your own** game dump and keys. It writes the `.nup` and the
+pack for **your** phone; neither this repository nor its releases carry game
+data, keys, console firmware or translated game code/shaders. Do not share the
+pack or the `.nup`: they contain the game's data. The game's names and data
+belong to their owners; this project is not affiliated with Nintendo, Bandai
+Namco or Sora Ltd.
